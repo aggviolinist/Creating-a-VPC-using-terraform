@@ -32,3 +32,7 @@ terraform destroy
    - Connect the NAT gateway to the EIP using `allocation_id`
 - Create 2 Private Route Tables
 - Associate the private subnets to the Private Route tables 
+
+# Creating a Security Group using terraform
+
+
