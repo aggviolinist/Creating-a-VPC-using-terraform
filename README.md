@@ -1,6 +1,7 @@
 # Creating-a-VPC-using-terraform
 Creating a VPC using Infrastructure as Code
 ![Alt text](/images/vpcpic.jpg?raw=true "The difference between Private and Public Subnets")
+![Alt text](/images/vpc-architecture.jpg?raw=true "The architectural design of the VPC")
 
 
 ## Tools Used 
@@ -12,8 +13,9 @@ Creating a VPC using Infrastructure as Code
 - Create a vpc terraform file 
   - Vpc 
   - Internet Gateway
-  - 2 Public Subnets
   - 1 Route table
+  - 2 Public Subnets
+  - Associate the Public Route tables to the the Public Subnets
   - 4 Private subnets (2 App tier & 2 Database tier)
 ## Apply
 ```sh
