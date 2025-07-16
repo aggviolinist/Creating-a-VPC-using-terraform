@@ -62,5 +62,23 @@ resource "aws_route_table" "private-route-table-2" {
     }
   
 }
-#4.1 Associate the Route tables to the Private Subnets 
-
+#4.1 Associate the Main Route tables to the Private Subnets 1
+resource "aws_route_table_association" "private-asssociation-to-subnet-1" {
+  subnet_id = aws_subnet.private-subnet-1.id
+  route_table_id = aws_route_table.private-route-table-1.id
+}
+#4.2 Associate the Main Route tables to the Private Subnets 3
+resource "aws_route_table_association" "private-association-to-subnet-3" {
+    subnet_id = aws_subnet.private-subnet-3.id
+    route_table_id = aws_route_table.private-route-table-1.id  
+}
+#4.3 Associate the Back up Route tables to the Private Subnet 2
+resource "aws_route_table_association" "private-association-to-subnet-2" {
+    subnet_id = aws_subnet.private-subnet-2.id
+    route_table_id = aws_route_table.private-route-table-2.id  
+}
+#4.4  Associate the Back up Route tables to the Private Subnet 4
+resource "aws_route_table_association" "private-association-to-subnet-4" {
+    subnet_id = aws_subnet.private-subnet-4.id
+    route_table_id = aws_route_table.private-route-table-2.id 
+}
