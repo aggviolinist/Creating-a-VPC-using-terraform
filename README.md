@@ -34,5 +34,9 @@ terraform destroy
 - Associate the private subnets to the Private Route tables 
 
 # Creating a Security Group using terraform
+- Create the ALB security group
+  - It's gonna route traffic from port 80,4443
+- Create the Bastion security group
+
 
 
