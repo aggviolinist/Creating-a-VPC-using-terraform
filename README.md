@@ -1,5 +1,7 @@
 # Creating-a-VPC-using-terraform
 Creating a VPC using Infrastructure as Code
+![Alt text](/images/vpcpic.jpg?raw=true "The difference between Private and Public Subnets")
+
 
 ## Tools Used 
 ### VPC

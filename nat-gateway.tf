@@ -62,4 +62,5 @@ resource "aws_route_table" "private-route-table-2" {
     }
   
 }
-#4.1 Associate 
+#4.1 Associate the Route tables to the Private Subnets 
+
