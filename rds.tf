@@ -11,7 +11,16 @@ resource "aws_db_subnet_group" "database-subnet-group" {
 
 # Create an RDS instance
 resource "aws_db_instance" "rds-db-instance" {
-    
-  
+  instance_class = "${var.database-instance-class}"
+  skip_final_snapshot = true
+  availability_zone = "us-east-1a"
+  identifier = "${var.database-instance-identifier}"
+  snapshot_identifier = 
+  db_subnet_group_name = aws_db_subnet_group.database-subnet-group.id.name
+  multi_az = false #"${var.multi-az-deployment}"
+  vpc_security_group_ids = [aws_security_group.database-security-group.id]
 }
 # Get the latest snapshot from the RDS 
+data "" "name" {
+  
+}
