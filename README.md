@@ -35,8 +35,16 @@ terraform destroy
 
 # Creating a Security Group using terraform
 - Create the ALB security group
-  - It's gonna route traffic from port 80,4443
+  - It's gonna route traffic from port `80,443`
 - Create the Bastion security group
+  - The Ip of the bastion should always be an individual IP and not open to the internet 
+  - Uses port `22`
+- Create app security group, it accepts traffic from;
+  - 444 `HTTPS`
+  - 80 `HTTP`
+  - 22 `SSH`
+- Database security group, it accepts traffic from;
+  - 3306 `Mysql/Aurora traffic`
 
 
 
