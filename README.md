@@ -1,9 +1,5 @@
 # Creating-a-VPC-using-terraform
 Creating a VPC using Infrastructure as Code
-![Alt text](/images/vpcpic.jpg?raw=true "The difference between Private and Public Subnets")
-![Alt text](/images/vpc-architecture.jpg?raw=true "The architectural design of the VPC")
-
-
 ## Tools Used 
 ### VPC
 ### Terraform 
@@ -17,14 +13,8 @@ Creating a VPC using Infrastructure as Code
   - 2 Public Subnets
   - Associate the Public Route tables to the the Public Subnets
   - 4 Private subnets (2 App tier & 2 Database tier)
-## Apply
-```sh
-terraform init
-terraform fmt
-terraform plan
-terraform apply
-terraform destroy
-```
+![Alt text](/images/vpcpic.jpg?raw=true "The difference between Private and Public Subnets")
+
 # Creating a NAT Gateway using terraform
 - Create 2 elastic ips for the public subnets
 - Create 2 NAT gateways
@@ -32,6 +22,7 @@ terraform destroy
    - Connect the NAT gateway to the EIP using `allocation_id`
 - Create 2 Private Route Tables
 - Associate the private subnets to the Private Route tables 
+![Alt text](/images/vpc-architecture.jpg?raw=true "The architectural design of the NAT Gateway")
 
 # Creating a Security Group using terraform
 - Create the ALB security group
@@ -45,6 +36,13 @@ terraform destroy
   - 22 `SSH`
 - Database security group, it accepts traffic from;
   - 3306 `Mysql/Aurora traffic`
+![Alt text](/images/vpc-architecture2.jpg?raw=true "Architectural design of the Security Groups")
 
-
-
+## Apply
+```sh
+terraform init
+terraform fmt
+terraform plan
+terraform apply
+terraform destroy
+```
