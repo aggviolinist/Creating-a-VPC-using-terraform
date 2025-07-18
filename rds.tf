@@ -19,6 +19,7 @@ resource "aws_db_instance" "rds-db-instance" {
   db_subnet_group_name   = aws_db_subnet_group.database-subnet-group.name
   multi_az               = false #"${var.multi-az-deployment}"
   vpc_security_group_ids = [aws_security_group.database-security-group.id]
+  #db_name = "application-db"
 }
 # Get the latest snapshot from the RDS 
 data "aws_db_snapshot" "latest-database-snapshot" {
