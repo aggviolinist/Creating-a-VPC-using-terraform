@@ -1,5 +1,5 @@
 # Creating-a-VPC-using-terraform
-Creating a VPC using Infrastructure as Code
+Creating a VPC using Infrastructure as Code.
 ## Tools Used 
 ### VPC
 ### Terraform 
